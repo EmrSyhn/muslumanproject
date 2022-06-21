@@ -73,29 +73,22 @@ class _UserPageState extends State<UserPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         'Kitap Ara',
                         style: TextStyle(
                             color: Colors.green, fontWeight: FontWeight.bold),
                       ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.end,
-                      //   children: [
-                      //     AnimSearchBar(
-                      //       helpText: 'Arama yap',
-                      //       width: 300,
-                      //       textController: textController,
-                      //       onSuffixTap: () {
-                      //         setState(
-                      //           () {
-                      //             textController.clear();
-                      //           },
-                      //         );
-                      //       },
-                      //     ),
-                      //   ],
-                      // ),
+                      TextField(
+                        decoration: InputDecoration(
+                          prefixIcon: const Icon(Icons.search),
+                          hintText: 'Kitap arama',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: const BorderSide(color: Colors.red),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),

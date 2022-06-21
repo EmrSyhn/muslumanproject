@@ -28,14 +28,22 @@ class LoginPage extends StatelessWidget {
                     children: [
                       TextFormField(
                         decoration: InputDecoration(
-                            border: UnderlineInputBorder(
-                                borderRadius: BorderRadius.circular(5.0)),
+                            prefixIcon:
+                                const Icon(Icons.account_circle_rounded),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: const BorderSide(color: Colors.red),
+                            ),
                             hintText: 'Username'),
                       ),
+                      const SizedBox(height: 20),
                       TextFormField(
                         decoration: InputDecoration(
-                            border: UnderlineInputBorder(
-                                borderRadius: BorderRadius.circular(5.0)),
+                            prefixIcon: const Icon(Icons.password),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: const BorderSide(color: Colors.red),
+                            ),
                             hintText: 'Password'),
                       ),
                     ],
