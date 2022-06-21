@@ -26,13 +26,13 @@ class LoginPage extends StatelessWidget {
                   padding: const EdgeInsets.all(20),
                   child: Column(
                     children: [
-                      TextField(
+                      TextFormField(
                         decoration: InputDecoration(
                             border: UnderlineInputBorder(
                                 borderRadius: BorderRadius.circular(5.0)),
                             hintText: 'Username'),
                       ),
-                      TextField(
+                      TextFormField(
                         decoration: InputDecoration(
                             border: UnderlineInputBorder(
                                 borderRadius: BorderRadius.circular(5.0)),
@@ -43,6 +43,14 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: const Color.fromARGB(255, 11, 65, 72),
+                  shadowColor: const Color.fromRGBO(11, 65, 72, 1),
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32.0)),
+                  minimumSize: const Size(232, 45),
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -50,7 +58,7 @@ class LoginPage extends StatelessWidget {
                   );
                 },
                 child: const Text('Login'),
-              )
+              ),
             ],
           ),
         ),

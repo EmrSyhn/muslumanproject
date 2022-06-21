@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:anim_search_bar/anim_search_bar.dart';
+// import 'package:anim_search_bar/anim_search_bar.dart';
 
 class UserPage extends StatefulWidget {
   const UserPage({Key? key}) : super(key: key);
@@ -66,35 +66,43 @@ class _UserPageState extends State<UserPage> {
                   ],
                 ),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  const Text(
-                    'Kitap Ara',
-                    style: TextStyle(color: Colors.green),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      AnimSearchBar(
-                        helpText: 'Arama yap',
-                        width: 300,
-                        textController: textController,
-                        onSuffixTap: () {
-                          setState(
-                            () {
-                              textController.clear();
-                            },
-                          );
-                        },
+              Container(
+                color: const Color.fromARGB(255, 228, 228, 228),
+                width: MediaQuery.of(context).size.width,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: const [
+                      Text(
+                        'Kitap Ara',
+                        style: TextStyle(
+                            color: Colors.green, fontWeight: FontWeight.bold),
                       ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.end,
+                      //   children: [
+                      //     AnimSearchBar(
+                      //       helpText: 'Arama yap',
+                      //       width: 300,
+                      //       textController: textController,
+                      //       onSuffixTap: () {
+                      //         setState(
+                      //           () {
+                      //             textController.clear();
+                      //           },
+                      //         );
+                      //       },
+                      //     ),
+                      //   ],
+                      // ),
                     ],
                   ),
-                ],
+                ),
               ),
               const SizedBox(height: 5),
               Container(
-                color: const Color.fromARGB(255, 152, 150, 150),
+                color: const Color.fromARGB(255, 228, 228, 228),
                 width: MediaQuery.of(context).size.width,
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
@@ -140,7 +148,7 @@ class _UserPageState extends State<UserPage> {
               ),
               const SizedBox(height: 10),
               Container(
-                color: Colors.amber,
+                color: const Color.fromARGB(255, 228, 228, 228),
                 width: MediaQuery.of(context).size.width,
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
@@ -161,8 +169,6 @@ class _UserPageState extends State<UserPage> {
                             icon: Image.asset('assets/images/kelaynak.png'),
                             iconSize: 100,
                             onPressed: () {},
-                            tooltip: 'button with icon',
-                            highlightColor: Colors.deepOrangeAccent,
                           ),
                           const Text(
                             'Ustad amcık\n Programı 19:00"da',
